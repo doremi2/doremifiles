@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		
+		<!-- <context:component-scan base-package="com.icia.doremi" /> -->
+		<!--  -->
+		
+		
+		<bean id="std" class="com.icia.doremi.bean.Student">
+		</bean>
+		<!--bean태그로 등록하면 @Component 필요 없이 타입(@Autowired)이나 이름(@Resource(name="name"))으로 DI할 수 있다.  -->
+		<!-- @Autowired는 타입으로 주입하지만 타입이 중복(상속시)되면 필드명과 bean태그의 id와 일치하는 bean을 주입한다. -->
+</beans>
